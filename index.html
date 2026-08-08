@@ -25,7 +25,10 @@
   body{
     font-family:'Work Sans', sans-serif;
     color:var(--ink);
-    background:var(--parchment);
+    background:
+      radial-gradient(ellipse 900px 600px at 15% -5%, rgba(201,151,63,0.10) 0%, rgba(201,151,63,0) 60%),
+      radial-gradient(ellipse 700px 500px at 100% 25%, rgba(75,93,82,0.08) 0%, rgba(75,93,82,0) 60%),
+      linear-gradient(180deg, #FDFBF6 0%, var(--parchment) 40%, var(--parchment-dim) 100%);
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
@@ -45,7 +48,6 @@
     font-weight:600;
   }
 
-  /* ---------- HEADER ---------- */
   header{
     padding:26px 0;
     border-bottom:1px solid var(--line);
@@ -74,7 +76,6 @@
   }
   .btn-ghost:hover{background:var(--navy);color:var(--parchment);}
 
-  /* ---------- HERO ---------- */
   .hero{
     padding:96px 0 80px;
     position:relative;
@@ -88,6 +89,26 @@
     border-radius:50%;
     background:radial-gradient(circle, rgba(201,151,63,0.16) 0%, rgba(201,151,63,0) 70%);
     pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero-art{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .hero-art svg{
+    width:100%;
+    max-width:400px;
+    height:auto;
+  }
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-art{order:-1; max-width:280px; margin:0 auto 12px;}
   }
   .hero .eyebrow{margin-bottom:18px;display:block;}
   .hero h1{
@@ -131,7 +152,6 @@
   }
   .hero .agent-line strong{color:var(--navy);}
 
-  /* ---------- COVERAGE CARDS (signature element) ---------- */
   .coverage{
     padding:30px 0 100px;
   }
@@ -209,9 +229,10 @@
     .fan:hover .card, .card:hover{transform:translateY(-6px) !important;}
   }
 
-  /* ---------- HOW IT WORKS ---------- */
   .steps{
-    background:var(--parchment-dim);
+    background:
+      radial-gradient(ellipse 600px 400px at 90% 0%, rgba(201,151,63,0.06) 0%, rgba(201,151,63,0) 60%),
+      var(--parchment-dim);
     padding:80px 0;
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
@@ -242,7 +263,6 @@
     .steps-grid{grid-template-columns:1fr; gap:32px;}
   }
 
-  /* ---------- FORM ---------- */
   .inquire{
     padding:96px 0 100px;
   }
@@ -362,7 +382,6 @@
     .cta-panel{justify-content:flex-start; margin-top:8px;}
   }
 
-  /* ---------- FOOTER ---------- */
   footer{
     padding:44px 0 60px;
     border-top:1px solid var(--line);
@@ -409,11 +428,30 @@
 
 <section class="hero">
   <div class="wrap">
-    <span class="eyebrow">Licensed Life Insurance Agent</span>
-    <h1>Protection for the people<br>who count on <em>you</em>.</h1>
-    <p class="lede">A few minutes with a form today can mean your family never has to worry about tomorrow. I'll walk you through the right coverage — no pressure, no jargon.</p>
-    <div class="cta-row">
-      <a href="inquiry.html" class="btn-primary">Start My Inquiry</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Licensed Life Insurance Agent</span>
+        <h1>Protection for the people<br>who count on <em>you</em>.</h1>
+        <p class="lede">A few minutes with a form today can mean your family never has to worry about tomorrow. I'll walk you through the right coverage — no pressure, no jargon.</p>
+        <div class="cta-row">
+          <a href="inquiry.html" class="btn-primary">Start My Inquiry</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 60 220 A 140 140 0 0 1 340 220" fill="none" stroke="#C9973F" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+          <path d="M 90 235 A 110 110 0 0 1 310 235" fill="none" stroke="#C9973F" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+          <line x1="50" y1="330" x2="350" y2="330" stroke="#14213D" stroke-width="2" opacity="0.12"/>
+          <circle cx="140" cy="215" r="24" fill="#14213D"/>
+          <path d="M 105 330 C 105 270 115 245 140 245 C 165 245 175 270 175 330 Z" fill="#14213D"/>
+          <circle cx="255" cy="215" r="24" fill="#14213D"/>
+          <path d="M 220 330 C 220 270 230 245 255 245 C 280 245 290 270 290 330 Z" fill="#14213D"/>
+          <circle cx="198" cy="248" r="16" fill="#C9973F"/>
+          <path d="M 175 330 C 175 292 182 275 198 275 C 214 275 221 292 221 330 Z" fill="#C9973F"/>
+          <path d="M 160 300 Q 180 290 178 305" fill="none" stroke="#FBF8F2" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+          <path d="M 236 300 Q 216 290 218 305" fill="none" stroke="#FBF8F2" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
