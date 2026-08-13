@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
 <title>Get a Quote — Sankara Moise, Licensed Life Insurance Agent</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,8 +12,8 @@
   :root{
     --navy:#14213D;
     --navy-deep:#0D1830;
-    --parchment:#FBF8F2;
-    --parchment-dim:#F1ECE0;
+    --parchment:#FFFFFF;
+    --parchment-dim:#F5F5F4;
     --gold:#C9973F;
     --gold-soft:#E7C888;
     --ink:#22262B;
@@ -20,10 +21,11 @@
     --line:rgba(20,33,61,0.14);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
+  html{color-scheme:light;}
   body{
     font-family:'Work Sans', sans-serif;
-    color:var(--ink);
-    background:var(--parchment);
+    color:#22262B;
+    background:#FFFFFF;
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
@@ -87,7 +89,7 @@
   .form-card{
     max-width:640px;
     margin:0 auto;
-    background:var(--navy);
+    background:#14213D;
     border-radius:8px;
     padding:52px;
     position:relative;
@@ -121,25 +123,25 @@
     font-size:0.78rem;
     letter-spacing:0.04em;
     text-transform:uppercase;
-    color:var(--gold-soft);
+    color:#E7C888;
     margin-bottom:7px;
   }
   .field input{
     width:100%;
     padding:14px 15px;
-    background:rgba(251,248,242,0.06);
-    border:1px solid rgba(251,248,242,0.2);
+    background:#1D2C4E;
+    border:1px solid rgba(251,248,242,0.25);
     border-radius:3px;
-    color:var(--parchment);
+    color:#FBF8F2;
     font-family:'Work Sans', sans-serif;
     font-size:0.96rem;
     transition:border-color .2s ease, background .2s ease;
   }
-  .field input::placeholder{color:rgba(251,248,242,0.35);}
+  .field input::placeholder{color:rgba(251,248,242,0.4);}
   .field input:focus{
     outline:none;
-    border-color:var(--gold);
-    background:rgba(251,248,242,0.1);
+    border-color:#C9973F;
+    background:#22315A;
   }
   .field-row{
     display:grid;
@@ -209,7 +211,7 @@
         <input type="hidden" name="_subject" value="New Life Insurance Inquiry">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="true">
-        <input type="hidden" name="_next" value="https://sankaram0915-ship-it.github.io/insurance-page/thank-you.html
+        <input type="hidden" name="_next" value="https://sankaram0915-ship-it.github.io/insurance-page/thank-you.html">
 
         <div class="field">
           <label for="name">Full Name</label>
