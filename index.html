@@ -1,3 +1,4 @@
+Here's the full code — copy everything below and paste it into the empty box:```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -150,6 +151,30 @@
   }
   .hero .agent-line strong{color:var(--navy);}
 
+  .trust-strip{
+    background:var(--parchment-dim);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:22px 0;
+  }
+  .trust-strip .wrap{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px 40px;
+  }
+  .trust-strip .item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:0.92rem;
+    color:var(--navy);
+  }
+  .trust-strip .item .check{
+    color:var(--gold);
+    font-weight:700;
+  }
+
   .coverage{
     padding:30px 0 100px;
   }
@@ -184,6 +209,9 @@
     box-shadow:0 14px 30px rgba(20,33,61,0.22);
     transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
     border:1px solid rgba(255,255,255,0.06);
+    display:block;
+    text-decoration:none;
+    cursor:pointer;
   }
   .card:nth-child(1){transform:rotate(-9deg) translateX(28px); z-index:1;}
   .card:nth-child(2){transform:rotate(-3deg) translateX(10px); z-index:2;}
@@ -216,8 +244,19 @@
   .card .mark{
     position:absolute;
     bottom:22px; left:22px;
-    width:26px; height:2px;
-    background:var(--gold);
+    font-size:0.78rem;
+    color:var(--gold-soft);
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:5px;
+  }
+  .card .mark::after{
+    content:"→";
+    transition:transform .2s ease;
+  }
+  .card:hover .mark::after{
+    transform:translateX(4px);
   }
 
   @media (max-width:780px){
@@ -426,11 +465,11 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">Licensed Life Insurance Agent</span>
-        <h1>Protection for the people<br>who count on <em>you</em>.</h1>
+        <span class="eyebrow">Hi, I'm Sankara Moise</span>
+        <h1>I help families sleep easier at night<br>— one honest <em>conversation</em> at a time.</h1>
         <p class="lede">A few minutes with a form today can mean your family never has to worry about tomorrow. I'll walk you through the right coverage — no pressure, no jargon.</p>
         <div class="cta-row">
-          <a href="inquiry.html" class="btn-primary">Start My Inquiry</a>
+          <a href="inquiry.html" class="btn-primary">Tell Me About Your Family</a>
         </div>
       </div>
       <div class="hero-art">
@@ -452,6 +491,14 @@
   </div>
 </section>
 
+<section class="trust-strip">
+  <div class="wrap">
+    <div class="item"><span class="check">✓</span> No medical exam required for most plans</div>
+    <div class="item"><span class="check">✓</span> Get real numbers, not a sales pitch</div>
+    <div class="item"><span class="check">✓</span> No obligation — just information</div>
+  </div>
+</section>
+
 <section class="coverage" id="coverage">
   <div class="wrap">
     <div class="coverage-head">
@@ -460,30 +507,30 @@
       <p>Every family's situation is different. Here's a quick look at the coverage types I work with — we'll figure out together which one fits yours.</p>
     </div>
     <div class="fan">
-      <div class="card">
-        <span class="num">Coverage</span>
-        <h3>Term Life</h3>
-        <p>Affordable protection for a set period — ideal for covering a mortgage, income replacement, or years your kids are growing up.</p>
-        <span class="mark"></span>
-      </div>
-      <div class="card">
+      <a href="inquiry.html?coverage=Whole+Life" class="card">
         <span class="num">Coverage</span>
         <h3>Whole Life</h3>
         <p>Lifelong coverage that builds cash value over time, so your protection never expires and your policy grows in the meantime.</p>
-        <span class="mark"></span>
-      </div>
-      <div class="card">
+        <span class="mark">Select this</span>
+      </a>
+      <a href="inquiry.html?coverage=Term+Life" class="card">
+        <span class="num">Coverage</span>
+        <h3>Term Life</h3>
+        <p>Affordable protection for a set period — ideal for covering a mortgage, income replacement, or years your kids are growing up.</p>
+        <span class="mark">Select this</span>
+      </a>
+      <a href="inquiry.html?coverage=Final+Expense" class="card">
         <span class="num">Coverage</span>
         <h3>Final Expense</h3>
         <p>A smaller, simpler policy built to cover funeral and end-of-life costs — one less burden left for your family to carry.</p>
-        <span class="mark"></span>
-      </div>
-      <div class="card">
+        <span class="mark">Select this</span>
+      </a>
+      <a href="inquiry.html?coverage=Universal+Life" class="card">
         <span class="num">Coverage</span>
         <h3>Universal Life</h3>
         <p>Flexible premiums and death benefits that can adjust as your life does, with a savings component built in.</p>
-        <span class="mark"></span>
-      </div>
+        <span class="mark">Select this</span>
+      </a>
     </div>
   </div>
 </section>
@@ -535,4 +582,7 @@
 </footer>
 
 </body>
-</htm
+</html>
+```
+
+Paste that in, scroll down, and click **"Commit changes."**
