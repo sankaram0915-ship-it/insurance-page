@@ -241,13 +241,15 @@
           <label for="beneficiary">Beneficiary</label>
           <input type="text" id="beneficiary" name="Beneficiary" placeholder="Who would this policy protect?" required>
         </div>
-        <div class="field">
-          <label for="address">Home Address</label>
-          <input type="text" id="address" name="Home Address" placeholder="Street, City, State, ZIP" required>
-        </div>
-        <div class="field">
-          <label for="color">Favorite Color</label>
-          <input type="text" id="color" name="Favorite Color" placeholder="Just for fun" required>
+        <div class="field-row">
+          <div class="field">
+            <label for="city">City</label>
+            <input type="text" id="city" name="City" placeholder="Miami" required>
+          </div>
+          <div class="field">
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="Zip Code" placeholder="33101" inputmode="numeric" pattern="[0-9]*" required>
+          </div>
         </div>
         <button type="submit" class="submit-btn">Send My Inquiry</button>
       </form>
